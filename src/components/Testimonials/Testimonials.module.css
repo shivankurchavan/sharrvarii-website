@@ -1,0 +1,227 @@
+.testimonials {
+    background: linear-gradient(135deg, #fdf4ff 0%, #f5f3ff 100%);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--spacing-3xl);
+}
+
+.subtitle {
+    font-size: var(--text-lg);
+    color: var(--gray);
+    margin-top: var(--spacing-sm);
+}
+
+.videoSection {
+    margin-bottom: var(--spacing-3xl);
+}
+
+.videoSection h3 {
+    margin-bottom: var(--spacing-2xl);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.videoCarousel {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.videoPlayer {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    margin-bottom: var(--spacing-lg);
+}
+
+.videoFrame {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: none;
+}
+
+.videoInfo {
+    padding: var(--spacing-md);
+    background: var(--gradient-primary);
+    color: var(--white);
+    text-align: center;
+}
+
+.videoClient {
+    font-weight: 600;
+    font-size: var(--text-lg);
+    margin: 0;
+    color: var(--white);
+}
+
+.videoService {
+    font-size: var(--text-sm);
+    margin: var(--spacing-xs) 0 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.videoThumbnails {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+}
+
+.thumbnail {
+    position: relative;
+    width: 150px;
+    padding: var(--spacing-md);
+    background: var(--white);
+    border: 3px solid transparent;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    text-align: center;
+}
+
+.thumbnail:hover {
+    border-color: var(--primary-light);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.activeThumbnail {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-glow);
+}
+
+.thumbnailOverlay {
+    width: 100%;
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.playIcon {
+    color: var(--white);
+    font-size: var(--text-2xl);
+}
+
+.thumbnail p {
+    margin: 0;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.textSection {
+    margin-top: var(--spacing-3xl);
+}
+
+.textSection h3 {
+    margin-bottom: var(--spacing-2xl);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.testimonialsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.testimonialCard {
+    padding: var(--spacing-xl);
+    background: var(--white);
+    border-left: 4px solid var(--primary);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.testimonialCard:hover {
+    border-left-color: var(--accent);
+}
+
+.rating {
+    display: flex;
+    gap: 4px;
+}
+
+.star {
+    color: var(--accent);
+    font-size: var(--text-lg);
+}
+
+.testimonialText {
+    font-size: var(--text-base);
+    line-height: 1.7;
+    color: var(--dark);
+    font-style: italic;
+    flex-grow: 1;
+}
+
+.clientInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--light);
+}
+
+.clientName {
+    font-weight: 600;
+    color: var(--dark);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.anonBadge {
+    font-size: var(--text-sm);
+}
+
+.serviceType {
+    font-size: var(--text-sm);
+    color: var(--primary);
+    margin: var(--spacing-xs) 0 0;
+    font-weight: 500;
+}
+
+.date {
+    font-size: var(--text-sm);
+    color: var(--gray);
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .videoThumbnails {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .thumbnail {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .testimonialsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .videoCarousel {
+        padding: 0;
+    }
+
+    .testimonialCard {
+        padding: var(--spacing-md);
+    }
+}

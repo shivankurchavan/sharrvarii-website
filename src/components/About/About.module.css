@@ -1,0 +1,246 @@
+.about {
+    background: var(--white);
+    position: relative;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--spacing-3xl);
+}
+
+.subtitle {
+    font-size: var(--text-xl);
+    color: var(--primary);
+    font-weight: 600;
+    margin-top: var(--spacing-sm);
+}
+
+.bioSection {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--spacing-3xl);
+    margin-bottom: var(--spacing-3xl);
+}
+
+.bioContent {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.bio {
+    font-size: var(--text-lg);
+    line-height: 1.8;
+    color: var(--dark);
+    text-align: justify;
+}
+
+.missionCard {
+    background: var(--gradient-mystical);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-xl);
+    color: var(--white);
+}
+
+.missionCard h4 {
+    color: var(--white);
+    margin-bottom: var(--spacing-sm);
+}
+
+.missionCard p {
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.highlights {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.highlightCard {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: var(--light);
+    border-left: 4px solid var(--primary);
+}
+
+.highlightCard:hover {
+    transform: translateX(5px);
+    border-left-color: var(--accent);
+}
+
+.checkIcon {
+    width: 32px;
+    height: 32px;
+    background: var(--gradient-primary);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.highlightCard p {
+    margin: 0;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.servicesSection {
+    margin-bottom: var(--spacing-3xl);
+}
+
+.servicesSection h3 {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.serviceCard {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background: var(--white);
+    border: 2px solid var(--light);
+    transition: all var(--transition-base);
+}
+
+.serviceCard:hover {
+    border-color: var(--primary);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(139, 92, 246, 0.2);
+}
+
+.serviceIcon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--spacing-md);
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--white);
+    transition: var(--transition-base);
+}
+
+.serviceCard:hover .serviceIcon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: var(--shadow-glow);
+}
+
+.serviceCard h4 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--dark);
+}
+
+.serviceDesc {
+    font-size: var(--text-sm);
+    color: var(--gray);
+    margin-bottom: var(--spacing-md);
+    min-height: 60px;
+}
+
+.serviceDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--light);
+    font-size: var(--text-sm);
+}
+
+.duration {
+    color: var(--gray);
+}
+
+.price {
+    font-weight: 700;
+    font-size: var(--text-lg);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.certifications {
+    text-align: center;
+    padding: var(--spacing-2xl);
+    background: var(--light);
+    border-radius: var(--radius-xl);
+}
+
+.certifications h4 {
+    margin-bottom: var(--spacing-lg);
+}
+
+.certList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+
+.certBadge {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--white);
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-sm);
+    font-weight: 600;
+    color: var(--dark);
+    transition: var(--transition-base);
+}
+
+.certBadge:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.certIcon {
+    color: var(--accent);
+    font-size: var(--text-lg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bioSection {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .bio {
+        text-align: left;
+    }
+
+    .servicesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .serviceDesc {
+        min-height: auto;
+    }
+
+    .certList {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .certBadge {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+}
